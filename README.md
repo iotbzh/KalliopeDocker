@@ -6,7 +6,7 @@ the pulseaudio alsa plugin, in order to use the host pulse server without confli
 
 # Build
 ```
-docker run -ti --read-only --network=host --tmpfs /tmp  --user=$(id -u):$(id -g) kalliope 
+docker build --network=host --build-arg=uid=$(id -u) -t kalliope .
 ```
 
 # Run
